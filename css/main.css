@@ -1,0 +1,89 @@
+body {
+	background: #d7eb74;
+	color: #111;
+	font-family: "Cabin", "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+}
+
+
+/* Structure */
+
+header {
+	height: 50px;
+	background: #333;
+	margin: 0 0 25px 0;
+}
+
+#container {
+	width: 800px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 25px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+}
+
+/* Text */
+
+h2 {
+	font-size: 28px;
+	font-weight: 400;
+}
+
+/* Form Styles */
+
+#form {
+	
+}
+
+	#form fieldset {
+		border: 1px solid #ccc;
+		padding: 25px;
+		margin: 45px 0;
+	}
+	
+		#form fieldset legend {
+			font-size: 23px;
+		}
+		
+		#form fieldset div {
+			margin: 20px 0;
+		}
+		
+			#form fieldset label {
+				display: block;
+				font-size: 14px;
+			}
+			
+			#form fieldset input[type=text] {
+				font-size: 16px;
+				padding: 3px;
+				margin: 8px 0;
+			}
+			
+	/* Group Fields */
+	#group_name input, #group_organization input, #group_address input { width: 75%; }
+	
+	#form fieldset #group_city { margin: 0; }
+	#form fieldset #group_state { margin: 0 25px; }
+	#form fieldset #group_zip { margin: 0; }
+	
+	#group_city input { width: 265px; }
+	#group_state input { width: 50px; }
+	#group_zip input { width: 85px; }
+	
+	/* Sponsor Fields */
+	#sponsor_name input, #sponsor_email input { width: 75%; }
+	#sponsor_phone input { width: 25%; }
+	
+	/* Event Fields */
+	#event_name input { width: 75%;}
+	#event_description textarea {
+		font-size: 16px;
+		padding: 3px;
+		margin: 8px 0;
+		width: 75%;
+		height: 200px;
+	}
+	#form fieldset #event_youth input { margin: 8px 25px 0 0;}
