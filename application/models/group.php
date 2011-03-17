@@ -42,7 +42,7 @@ class Group extends CI_Model {
     
     private function encode($userinput) 
     {
-      $clean = urlencode($userinput);
+      $clean = htmlentities($userinput, ENT_QUOTES);
       return $clean;
     }
 }

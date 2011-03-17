@@ -37,7 +37,7 @@ class Report extends CI_Model {
     {
         $this->group_id = $group_id;
         $this->name = $this->encode($data["name"]);
-        $this->date = $this->encode($data["date"]);
+        $this->date = $this->make_date($data["date"]);
         $this->location = $this->encode($data["location"]);
         $this->description = $this->encode($data["description"]);
         $this->adults_reached = (int)$this->encode($data["adults_reached"]);
@@ -46,7 +46,16 @@ class Report extends CI_Model {
       
     private function encode($userinput) 
     {
-      $clean = urlencode($userinput);
+      $clean = htmlentities($userinput, ENT_QUOTES);
+      return $clean;
+    }
+    
+    private function make_date($userinput)
+    {    
+      $date = $userinput;//$date = 'dd-mm-yyyy' format
+      $list = explode('-', $date);
+      $mk = mktime(0, 0, 0, $list[0], $list[1], $list[2]);
+      $clean = strftime('%Y-%m-%d',$mk);
       return $clean;
     }
 }

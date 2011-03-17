@@ -32,12 +32,14 @@ class Sponsor extends CI_Model {
         $this->group_id = $group_id;
         $this->name = $this->encode($data["name"]);
         $this->email = $this->encode($data["email"]);
-        $this->phone = (int)$this->encode($data["phone"]);
+        $phone_chars = array('(', ')', '-', ' ');
+        $phone = str_replace($phone_chars, "", $data["phone"]);
+        $this->phone = $phone;
     }
     
     private function encode($userinput) 
     {
-      $clean = urlencode($userinput);
+      $clean = htmlentities($userinput, ENT_QUOTES);
       return $clean;
     }
 }
