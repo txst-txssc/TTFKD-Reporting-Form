@@ -3,7 +3,3 @@
 ## Overview
 
 A simple php form and DB schema for collecting reports. Built in CodeIgniter.
-
-## To-Do
-
-Export DB schema for MySQL.
