@@ -45,7 +45,7 @@ $config = array(
     array(
       'field' => 'sponsor[phone]',
       'label' => 'Adult Contact Phone',
-      'rules' => 'trim|required|integer|exact_length[10]'
+      'rules' => 'trim|required|exact_length[14]'
     ),
     array(
       'field' => 'event[name]',

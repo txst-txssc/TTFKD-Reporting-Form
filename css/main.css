@@ -33,9 +33,7 @@ h2 {
 
 /* Form Styles */
 
-#form {
-	
-}
+#form {}
 
 	#form fieldset {
 		border: 1px solid #ccc;
@@ -87,3 +85,13 @@ h2 {
 		height: 200px;
 	}
 	#form fieldset #event_youth input { margin: 8px 25px 0 0;}
+	
+/* Success */
+
+#success {}
+
+	#success p {
+		font-size: 14px;
+		line-height: 1.7;
+		margin: 25px 0;
+	}

@@ -36,8 +36,7 @@ class Form extends CI_Controller {
       // Create a Report
       $report = $this->report->create($_POST['event'], $group_id);
       
-      $data['group'] = $group_id;  
-      $this->load->view('report/formsuccess', $data);
+      $this->load->view('report/success');
     	
     }
   }

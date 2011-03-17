@@ -57,7 +57,7 @@
     
     <div id="sponsor_phone">
       <label>Phone:</label>
-      <input type="text" name="sponsor[phone]" value="<?php echo set_value('sponsor[phone]'); ?>" data-validate="validate(required, digits)" />
+      <input type="text" name="sponsor[phone]" value="<?php echo set_value('sponsor[phone]'); ?>" data-validate="validate(required)" />
     </div>
   </fieldset>
   
@@ -81,17 +81,16 @@
     
     <div id="event_description">
       <label>Description:</label>
-      <textarea name="event[description]" value="<?php echo set_value('event[description]'); ?>" data-validate="validate(required)"></textarea>
-      <!--<input type="text" name="event[description]" value="<?php echo set_value('event[description]'); ?>" data-validate="validate(required)" />-->
+      <textarea name="event[description]" data-validate="validate(required)"><?php echo set_value('event[description]'); ?></textarea>
     </div>
     
     <div id="event_youth" class="left">
-      <label>Total Youth Reached:</label>
+      <label>Total Youth Reached: (0-18 yrs)</label>
       <input type="text" name="event[youth_reached]" value="<?php echo set_value('event[youth_reached]'); ?>" data-validate="validate(required, digits)" />
     </div>
     
     <div id="event_adults" class="left">
-      <label>Total Adults Reached:</label>
+      <label>Total Adults Reached: (18+ yrs)</label>
       <input type="text" name="event[adults_reached]" value="<?php echo set_value('event[adults_reached]'); ?>" data-validate="validate(required, digits)" />
     </div>
   </fieldset>
